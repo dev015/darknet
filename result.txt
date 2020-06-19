@@ -1,0 +1,66 @@
+net.optimized_memory = 0 
+mini_batch = 1, batch = 1, time_steps = 1, train = 0 
+
+ seen 64, trained: 32013 K-images (500 Kilo-batches_64) 
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/2623.jpg: Predicted in 219.401000 milli-seconds.
+car 0.47andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.4693 172.0000 151.0000 112.0000
+ 172 151 112 36
+person 0.62andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039825984 0.6242 532.0000 138.0000 16.0000
+ 532 138 16 48
+car 0.38andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.3757 554.0000 142.0000 22.0000
+ 554 142 22 13
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/2694.jpg: Predicted in 68.282000 milli-seconds.
+car 0.97andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9741 64.0000 143.0000 139.0000
+ 64 143 139 60
+car 0.73andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.7251 555.0000 143.0000 23.0000
+ 555 143 23 14
+person 0.91andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039825984 0.9067 690.0000 138.0000 43.0000
+ 690 138 43 83
+bicycle 0.37andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039799472 0.3663 692.0000 179.0000 25.0000
+ 692 179 25 44
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/2811.jpg: Predicted in 73.646000 milli-seconds.
+car 0.56andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.5563 331.0000 141.0000 68.0000
+ 331 141 68 26
+truck 0.29andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039590528 0.2948 374.0000 151.0000 102.0000
+ 374 151 102 124
+car 0.38andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.3844 400.0000 150.0000 70.0000
+ 400 150 70 44
+car 0.91andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9075 537.0000 145.0000 75.0000
+ 537 145 75 62
+person 0.92andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039825984 0.9247 618.0000 145.0000 54.0000
+ 618 145 54 101
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/2861.jpg: Predicted in 74.330000 milli-seconds.
+car 0.97andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9711 8.0000 151.0000 121.0000
+ 8 151 121 80
+car 0.40andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.4043 277.0000 133.0000 70.0000
+ 277 133 70 40
+truck 0.74andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039590528 0.7376 279.0000 132.0000 73.0000
+ 279 132 73 42
+car 0.47andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.4708 423.0000 141.0000 45.0000
+ 423 141 45 24
+car 0.99andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9880 518.0000 147.0000 80.0000
+ 518 147 80 52
+person 0.97andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039825984 0.9705 610.0000 140.0000 62.0000
+ 610 140 62 104
+bicycle 0.34andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039799472 0.3388 611.0000 181.0000 61.0000
+ 611 181 61 72
+car 0.45andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.4541 696.0000 168.0000 264.0000
+ 696 168 264 365
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/3065.jpg: Predicted in 75.047000 milli-seconds.
+car 0.98andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9787 4.0000 167.0000 270.0000
+ 4 167 270 279
+car 0.55andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.5469 261.0000 131.0000 62.0000
+ 261 131 62 64
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/3226.jpg: Predicted in 75.873000 milli-seconds.
+person 0.51andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039825984 0.5073 319.0000 151.0000 44.0000
+ 319 151 44 102
+car 0.28andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.2847 458.0000 145.0000 22.0000
+ 458 145 22 12
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/3479.jpg: Predicted in 75.360000 milli-seconds.
+car 0.99andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9874 520.0000 148.0000 161.0000
+ 520 148 161 83
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/3552.jpg: Predicted in 71.985000 milli-seconds.
+Enter Image Path: /home/developer/carla/PythonAPI/examples/_out/3724.jpg: Predicted in 74.839000 milli-seconds.
+car 0.99andibandishandyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-1039593168 0.9940 330.0000 154.0000 166.0000
+ 330 154 166 81
+Enter Image Path: 

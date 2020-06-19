@@ -17,6 +17,15 @@ typedef __compar_fn_t comparison_fn_t;
 #endif
 #endif
 
+extern float det_left_x[100];
+extern float det_top_y[100];
+extern float det_width_bb[100];
+extern float det_height_bb[100];
+extern char *det_best_class[100];
+extern float det_prob_best_class[100];
+extern int det_num_obj;
+
+
 #include "http_stream.h"
 
 int check_mistakes = 0;
@@ -1551,6 +1560,34 @@ void calc_anchors(char *datacfg, int num_of_clusters, int width, int height, int
 }
 
 
+void write_detections(image im, int num, float thresh, box *boxes, float **probs, char **names, image **alphabet, int classes, char *save_name)
+{
+    int i;
+    FILE *f_img;
+    f_img = fopen(save_name, "w");
+
+    for(i = 0; i < num; ++i){
+        int class = max_index(probs[i], classes);
+        float prob = probs[i][class];
+        //write the class only if its prob is greater than zero
+        if(prob){
+            box b = boxes[i];
+
+            int left  = (b.x-b.w/2.)*im.w;
+            int right = (b.x+b.w/2.)*im.w;
+            int top   = (b.y-b.h/2.)*im.h;
+            int bot   = (b.y+b.h/2.)*im.h;
+
+            if(left < 0) left = 0;
+            if(right > im.w-1) right = im.w-1;
+            if(top < 0) top = 0;
+            if(bot > im.h-1) bot = im.h-1;
+            fprintf(f_img, "%s %f %d %d %d %d\n", names[class], prob, left, right, top, bot);
+        }
+    }
+    fclose(f_img);
+}
+
 void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filename, float thresh,
     float hier_thresh, int dont_show, int ext_output, int save_labels, char *outfile, int letter_box, int benchmark_layers)
 {
@@ -1609,8 +1646,8 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
         else sized = resize_image(im, net.w, net.h);
         layer l = net.layers[net.n - 1];
 
-        //box *boxes = calloc(l.w*l.h*l.n, sizeof(box));
-        //float **probs = calloc(l.w*l.h*l.n, sizeof(float*));
+        box *boxes = calloc(l.w*l.h*l.n, sizeof(box));
+        float **probs = calloc(l.w*l.h*l.n, sizeof(float*));
         //for(j = 0; j < l.w*l.h*l.n; ++j) probs[j] = (float*)xcalloc(l.classes, sizeof(float));
 
         float *X = sized.data;
@@ -1654,6 +1691,15 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
 
             FILE* fw = fopen(labelpath, "wb");
             int i;
+
+            for (int i = 0; i < det_num_obj; i++)
+            {
+                // sprintf(buff, "%d %2.4f %2.4f %2.4f %2.4f\n", class_id, dets[i].bbox.x, dets[i].bbox.y, dets[i].bbox.w, dets[i].bbox.h);
+                // fwrite(buff, sizeof(char), strlen(buff), fw);    
+                sprintf(buff, "%s %0.2f %3.0f %3.0f %3.0f %3.0f\n",det_best_class[i], det_prob_best_class[i], det_left_x[i],  det_top_y[i], det_width_bb[i], det_height_bb[i]);
+                fwrite(buff, sizeof(char), strlen(buff), fw);        
+            }
+
             for (i = 0; i < nboxes; ++i) {
                 char buff[1024];
                 int class_id = -1;
@@ -1665,8 +1711,7 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
                     }
                 }
                 if (class_id >= 0) {
-                    sprintf(buff, "%d %2.4f %2.4f %2.4f %2.4f\n", class_id, dets[i].bbox.x, dets[i].bbox.y, dets[i].bbox.w, dets[i].bbox.h);
-                    fwrite(buff, sizeof(char), strlen(buff), fw);
+                    //
                 }
             }
             fclose(fw);

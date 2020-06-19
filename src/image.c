@@ -20,6 +20,14 @@
 #include "stb_image_write.h"
 #endif
 
+float det_left_x[100] = {};
+float det_top_y[100] = {};
+float det_width_bb[100] = {};
+float det_height_bb[100] = {};
+char *det_best_class[100];
+float det_prob_best_class[100] = {};
+int det_num_obj = 0;
+
 extern int check_mistakes;
 //int windows = 0;
 
@@ -337,11 +345,22 @@ void draw_detections_v3(image im, detection *dets, int num, float thresh, char *
     // text output
     qsort(selected_detections, selected_detections_num, sizeof(*selected_detections), compare_by_lefts);
     int i;
+    det_num_obj = selected_detections_num;
     for (i = 0; i < selected_detections_num; ++i) {
         const int best_class = selected_detections[i].best_class;
-        printf("%s: %.0f%%", names[best_class],    selected_detections[i].det.prob[best_class] * 100);
+        printf("%s %0.2f", names[best_class], (selected_detections[i].det.prob[best_class]));
+
+        det_left_x[i] = round((selected_detections[i].det.bbox.x - selected_detections[i].det.bbox.w / 2)*im.w);
+        det_top_y[i] = round((selected_detections[i].det.bbox.y - selected_detections[i].det.bbox.h / 2)*im.h);
+        det_width_bb[i] = round(selected_detections[i].det.bbox.w*im.w);
+        det_height_bb[i] = round(selected_detections[i].det.bbox.h*im.h);
+        det_best_class[i] = names[best_class];
+        det_prob_best_class[i] = selected_detections[i].det.prob[best_class];
+        // printf("%s %0.2f %f %f %f %f\n", det_best_class[i], det_prob_best_class[i], det_left_x[i],  det_top_y[i], det_width_bb[i], det_height_bb[i]);
+                
+
         if (ext_output)
-            printf("\t(left_x: %4.0f   top_y: %4.0f   width: %4.0f   height: %4.0f)\n",
+        printf(" %.0f %.0f %.0f %.0f\n",
                 round((selected_detections[i].det.bbox.x - selected_detections[i].det.bbox.w / 2)*im.w),
                 round((selected_detections[i].det.bbox.y - selected_detections[i].det.bbox.h / 2)*im.h),
                 round(selected_detections[i].det.bbox.w*im.w), round(selected_detections[i].det.bbox.h*im.h));
@@ -350,10 +369,10 @@ void draw_detections_v3(image im, detection *dets, int num, float thresh, char *
         int j;
         for (j = 0; j < classes; ++j) {
             if (selected_detections[i].det.prob[j] > thresh && j != best_class) {
-                printf("%s: %.0f%%", names[j], selected_detections[i].det.prob[j] * 100);
+                printf("%s %0.2f", names[j], (selected_detections[i].det.prob[j]));
 
                 if (ext_output)
-                    printf("\t(left_x: %4.0f   top_y: %4.0f   width: %4.0f   height: %4.0f)\n",
+                printf(" %.0f %.0f %.0f %.0f\n",
                         round((selected_detections[i].det.bbox.x - selected_detections[i].det.bbox.w / 2)*im.w),
                         round((selected_detections[i].det.bbox.y - selected_detections[i].det.bbox.h / 2)*im.h),
                         round(selected_detections[i].det.bbox.w*im.w), round(selected_detections[i].det.bbox.h*im.h));
