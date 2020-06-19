@@ -1,5 +1,7 @@
 Modified YOLO: Can take multiple images and generate separate text file for each.
 
+#Change in image.c and detector.c
+
 ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
 
 
